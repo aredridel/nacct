@@ -1,0 +1,22 @@
+{
+  "name": "nacct",
+  "version": "0.0.0",
+  "description": "An accounting package",
+  "main": "app.js",
+  "license": "BSD",
+  "scripts": {
+    "start": "node ."
+  },
+  "jam": {
+    "packageDir": "public/vendor",
+    "baseUrl": "public",
+    "dependencies": {
+      "backbone": "*"
+    }
+  },
+  "dependencies": {
+    "express": "~3.0.0rc5",
+    "hogan-express": "~0.3.3",
+    "stylus": "~0.30.1"
+  }
+}
