@@ -1,11 +1,9 @@
-
-/**
- * Module dependencies.
- */
-
+/*jshint node:true */
+"use strict";
 var express = require('express'),
-    routes = require('./routes'),
-    user = require('./routes/user'),
+    requireReload = require('require-reload'),
+    routes = requireReload('./routes'),
+    user = requireReload('./routes/user'),
     http = require('http'),
     stylus = require('stylus'),
     bootstrap = require('bootstrap.stylus'),
