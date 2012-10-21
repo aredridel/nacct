@@ -8,12 +8,14 @@ var express = require('express'),
     user = require('./routes/user'),
     http = require('http'),
     stylus = require('stylus'),
+    bootstrap = require('bootstrap.stylus'),
     path = require('path');
 
 var app = express();
 
 function compile(str, path) {
     return stylus(str)
+    .use(bootstrap())
     .set('filename', path)
     .set('warn', true)
     .set('compress', true);
