@@ -24,8 +24,7 @@ function compile(str, path) {
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
-  app.set('view engine', 'hjs');
-  app.engine('hjs', require('hogan-express'));
+  app.set('view engine', 'mmm');
   app.set('layout', 'layout');
   app.use(express.favicon());
   app.use(express.logger('dev'));

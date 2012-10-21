@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "express": "~3.0.0rc5",
-    "hogan-express": "~0.3.3",
+    "mmm": "~0.2.1",
     "stylus": "~0.30.1",
     "bootstrap.stylus": "git://github.com/blup/bootstrap.stylus"
   }
