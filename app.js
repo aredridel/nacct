@@ -2,8 +2,6 @@
 "use strict";
 var express = require('express'),
     requireReload = require('require-reload'),
-    routes = requireReload('./routes'),
-    user = requireReload('./routes/user'),
     http = require('http'),
     stylus = require('stylus'),
     bootstrap = require('bootstrap.stylus'),
@@ -41,8 +39,7 @@ app.configure('development', function() {
   app.use(express.errorHandler());
 });
 
-app.get('/', routes.index);
-app.get('/users', user.list);
+require('./routes')(app);
 
 http.createServer(app).listen(app.get('port'), function() {
   console.log("Express server listening on port " + app.get('port'));

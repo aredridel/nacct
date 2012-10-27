@@ -1,9 +1,0 @@
-<h1>{{title}}</h1>
-
-<p> Welcome to {{title }}</p>
-
-<script>
-    require(['jquery', 'app/App'], function($, App) {
-        var app = new App({el: $('body')});
-    });
-</script>
