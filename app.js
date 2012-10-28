@@ -17,7 +17,9 @@ function compile(str, path) {
     .set('compress', true);
 }
 
-app.configure(function(){
+var routes = requireReload('./routes', app);
+
+app.configure(function() {
   app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'mmm');
@@ -26,6 +28,7 @@ app.configure(function(){
   app.use(express.logger('dev'));
   app.use(express.bodyParser());
   app.use(express.methodOverride());
+  app.use(routes);
   app.use(app.router);
   app.use(stylus.middleware({
       src: __dirname + '/styl',
@@ -39,7 +42,6 @@ app.configure('development', function() {
   app.use(express.errorHandler());
 });
 
-require('./routes')(app);
 
 http.createServer(app).listen(app.get('port'), function() {
   console.log("Express server listening on port " + app.get('port'));
