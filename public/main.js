@@ -1,5 +1,8 @@
-define(['app/App', 'backbone', 'jquery'], function(App, Backbone, $) {
+define(['app/Menu', 'backbone', 'jquery'], function(Menu, Backbone, $) {
     var Router = Backbone.Router.extend({
+        initialize: function() {
+            this.navbar = new Menu({el: $('.navbar'), router: this });
+        },
         routes: {
             'accounts': 'accounts',
             '*args': 'default'
@@ -7,7 +10,6 @@ define(['app/App', 'backbone', 'jquery'], function(App, Backbone, $) {
     });
 
     var router = new Router();
-    new App({el: $('body')});
 
     Backbone.history.start({pushState: true});
 });
