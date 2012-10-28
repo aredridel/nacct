@@ -6,8 +6,6 @@ module.exports = function(req, res, next) {
 
     run = true;
 
-    console.log('setting up routes', arguments);
-
     var main = function main(req, res, next) {
         res.render('app');
     };
