@@ -3,7 +3,7 @@
 <head>
     <title>{{ title }}</title>
     <link rel='stylesheet' href='/site.css'>
-    <script src='/vendor/require.js' data-main='App'></script>
+    <script src='/vendor/require.js' data-main='main'></script>
 </head>
 <body>
     {{> menu }}

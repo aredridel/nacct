@@ -1,11 +1,13 @@
-define(['backbone', 'app/Menu'], function(Backbone, Menu) {
+define(['backbone'], function(Backbone) {
     /*jshint browser:true*/
     "use strict";
     return Backbone.View.extend({
         initialize: function() {
-            this.navbar = new Menu({el: this.$('.navbar')});
         },
         events: {
+            'click .internal': function(ev) {
+                ev.preventDefault();
+            }
         }
     });
 });
