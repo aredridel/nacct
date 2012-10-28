@@ -9,12 +9,11 @@ module.exports = function(req, res, next) {
     console.log('setting up routes', arguments);
 
     var main = function main(req, res, next) {
-        res.render('index', {title: 'test'});
+        res.render('app');
     };
 
     req.app.get('/', main);
     req.app.get('/accounts', main);
-    req.app.get('/accounts2', main);
 
     return next();
 };
