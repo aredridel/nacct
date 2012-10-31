@@ -11,7 +11,8 @@
     "packageDir": "public/vendor",
     "baseUrl": "public",
     "dependencies": {
-      "backbone": "*"
+      "backbone": "*",
+      "text": "~2.0.0"
     }
   },
   "dependencies": {

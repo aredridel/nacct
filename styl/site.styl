@@ -3,3 +3,61 @@
 body {
     padding-top: 40px;
 }
+
+.container-flex {
+    display: flex;
+    &.vertical {
+        flex-flow: column;
+    }
+    > .navbar {
+        margin: 0;
+        > .navbar-inner {
+            border-radius: 0;
+        }
+    }
+}
+
+#mainView {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 40px;
+}
+
+.Accounts {
+    padding: 20px;
+    background-color: #e8e3c3;
+    color: #524b31;
+
+    thead {
+        border-bottom: 1px solid #524b31;
+        box-shadow: 0px 2px 0px #524b31;
+
+    }
+    th, td {
+        padding: 0px 8px;
+    }
+
+    tr :nth-child(2) {
+        text-align: right;
+    }
+
+    tr:nth-child(even) {
+        //background-color: #C3DBBA;
+        //color: #1F241E;
+    }
+
+    a { 
+        color: #524b31;
+    }
+
+    flex: 1;
+    display: flex;
+    .container-flex {
+        align-items: center;
+    }
+
+
+}

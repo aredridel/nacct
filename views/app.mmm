@@ -6,15 +6,15 @@
     <script src='/vendor/require.js' data-main='main'></script>
 </head>
 <body>
-    <nav class='navbar navbar-inverse navbar-fixed-top' id='navigation'>
+    <nav class='navbar navbar-fixed-top navbar-inverse' id='navigation'>
         <div class='navbar-inner'>
             <ul class='nav'>
-                <li><a href='/' class='internal'>Home</a></li>
-                <li><a href='/accounts' class='internal'>Accounts</a></li>
+                <li><a href='/'>Home</a></li>
+                <li><a href='/accounts'>Accounts</a></li>
             </ul>
         </div>
     </nav>
-    <div class='container-fluid' id='mainView'>
+    <div id='mainView'>
     </div>
 </body>
 </html>
