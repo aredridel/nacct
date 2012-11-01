@@ -1,3 +1,4 @@
+var requireReload = require('require-reload');
 var run = false;
 module.exports = function(req, res, next) {
     if (run) {
@@ -6,12 +7,14 @@ module.exports = function(req, res, next) {
 
     run = true;
 
-    var main = function main(req, res, next) {
+    var loadApp = function loadApp(req, res, next) {
         res.render('app');
     };
 
-    req.app.get('/', main);
-    req.app.get('/accounts', main);
+    req.app.get('/', loadApp);
+    req.app.get('/accounts', loadApp);
+
+    req.app.resource('data/accounts', requireReload('./accounts'));
 
     return next();
 };

@@ -1,20 +1,20 @@
-define(['app/Menu', 'backbone', 'jquery', 'app/Accounts'], function(Menu, Backbone, $, Accounts) {
+define(['app/Menu', 'backbone', 'jquery', 'app/Accounts', 'app/models/Accounts'], function(Menu, Backbone, $, Accounts, AccountsCollection) {
     var Router = Backbone.Router.extend({
         initialize: function() {
             this.navbar = new Menu({el: $('#navigation')});
         },
+
         routes: {
             'accounts': 'showAccounts',
             '*args': 'default'
         },
+
         showAccounts: function() {
-            var accounts = new Accounts({collection: new Backbone.Collection()});
+            var accounts = new Accounts({collection: new AccountsCollection()});
             this.showView(accounts);
-            accounts.collection.reset([
-                {id: 1, name: 'Bank of Evil', balance: 205.91},
-                {id: 2, name: 'Former Lehman Brothers', balance: 87.50}
-            ]);
+            accounts.collection.fetch();
         },
+
         showView: function(view) {
             if (this.currentView) {
                 this.currentView.remove();
@@ -25,6 +25,7 @@ define(['app/Menu', 'backbone', 'jquery', 'app/Accounts'], function(Menu, Backbo
             this.currentView = view;
             $('#mainView').append(this.currentView.el);
         },
+
         default: function() {
             this.showView();
         }

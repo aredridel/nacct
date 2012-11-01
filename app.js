@@ -5,7 +5,8 @@ var express = require('express'),
     http = require('http'),
     stylus = require('stylus'),
     bootstrap = require('bootstrap.stylus'),
-    path = require('path');
+    path = require('path'),
+    resource = require('express-resource');
 
 var app = express();
 

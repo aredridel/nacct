@@ -19,6 +19,7 @@
     "express": "~3.0.0rc5",
     "mmm": "~0.2.1",
     "stylus": "~0.30.1",
-    "bootstrap.stylus": "git://github.com/blup/bootstrap.stylus"
+    "bootstrap.stylus": "git://github.com/blup/bootstrap.stylus",
+    "express-resource": "~1.0.0"
   }
 }
