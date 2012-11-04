@@ -1,7 +1,13 @@
 @import "bootstrap";
 
 body {
+    background-color: #e8e3c3;
+    color: #524b31;
     padding-top: 40px;
+    font-family: Palatino;
+    a { 
+        color: #524b31;
+    }
 }
 
 .container-flex {
@@ -24,13 +30,10 @@ body {
     right: 0;
     left: 0;
     top: 40px;
+    padding: 20px;
 }
 
-.Accounts {
-    padding: 20px;
-    background-color: #e8e3c3;
-    color: #524b31;
-
+.Accounts, .Account {
     thead {
         border-bottom: 1px solid #524b31;
         box-shadow: 0px 2px 0px #524b31;
@@ -49,11 +52,11 @@ body {
         //color: #1F241E;
     }
 
-    a { 
-        color: #524b31;
-    }
-
     flex: 1;
+}
+
+.Accounts {
+
     display: flex;
     .container-flex {
         align-items: center;

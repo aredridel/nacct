@@ -13,8 +13,11 @@ module.exports = function(req, res, next) {
 
     req.app.get('/', loadApp);
     req.app.get('/accounts', loadApp);
+    req.app.get('/accounts/*', loadApp);
 
-    req.app.resource('data/accounts', requireReload('./accounts'));
+    var accounts = req.app.resource('accounts', requireReload('./accounts'));
+    var transactions = req.app.resource('transactions', requireReload('./transactions'));
+    accounts.add(transactions);
 
     return next();
 };

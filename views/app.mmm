@@ -3,7 +3,7 @@
 <head>
     <title>A tiny accounting app</title>
     <link rel='stylesheet' href='/site.css'>
-    <script src='/vendor/require.js' data-main='main'></script>
+    <script src='/vendor/require.js' data-main='/main'></script>
 </head>
 <body>
     <nav class='navbar navbar-fixed-top navbar-inverse' id='navigation'>
